@@ -399,3 +399,35 @@ console.log('24'/ 2);
 let n= '1' + 1;
 n = n - 1;
 console.log(n);
+
+
+
+/******************Tuthy and falsy value */
+
+/******************Whe have 5 Falsey values: 0, '', undefined, null and NaN Anything else */
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+//Create new constant about money
+
+//THis is a truthy value
+const money = 100;
+if(money){
+    console.log('Buy a Bread');
+}else{
+    console.log('Dont Spend a Dime');
+}
+
+
+//This is a Falsy value
+let product = 0;
+if(product){
+    console.log('Stay Home');
+}else{
+    console.log('Buy Bread Again')
+}
+
