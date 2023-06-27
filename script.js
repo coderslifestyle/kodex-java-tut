@@ -372,3 +372,11 @@ if(markBMI > johnBMI){
 else{
     console.log(`John's BMI ${johnBMI} is higher than Marks's ${markBMI}!`)
 }
+
+// ************************** Ttpe Conversion to  anc coercion
+//  TYpe conversion is the process converting a value from one type to another
+
+const inputYear =  '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 10);
+
