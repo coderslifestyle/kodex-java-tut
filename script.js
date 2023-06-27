@@ -1,290 +1,264 @@
-/*
-Javascript has 8 datatype
-1. String
-2. number
-3. bigint
-4. boolean
-5. undefined
-6. undefined null
-7. symbol
-8. object
+// ***************************** Values and Variables ********************************
+console.log("Hello World!");
 
 
-
-
-
-*/
-
-
-//Value and Variable
-console.log("Hello World");
-
-
-let firstName = "Ebuka";
+let firstName = "Donald";
 
 console.log(firstName);
 
 
-//Variable nameing convention
-let last_name2 = "Kelz";
-let $function = 50;
+// ************************** Variable Naming Conventions *****************************
+let last_name2 = "John"
+let _function = 50;
 
-//BOlean-True or False valiues
-var JavaScriptIsEasy = true;
-console.log(typeof JavaScriptIsEasy);
+let birthYear = 1990;
 
-console.log(typeof 25);
+console.log(last_name2);
 
 
+// ******************************* Data Types ************************************
 
+/*
+JavaScript has 8 Datatypes
+    1. String
+    2. Number
+    3. Bigint
+    4. Boolean
+    5. Undefined
+    6. Null
+    7. Symbol
+    8. Object
+ */
 
-//Numbers
+// 1. Booleans->True or False Values
+var javaScriptIsEasy = true;
+var lifeisHard = false;
 
+console.log(typeof lifeisHard);
+
+// 2. Numbers
 donaldAge = 150;
-nsonsoAge = 90.5;
+nonsoAge = 90.5;
 
 console.log(typeof donaldAge);
-console.log(typeof nsonsoAge);
+console.log(typeof nonsoAge);
+
+// 3. Strings
+let message = "Welcome to Dubai";
+console.log(typeof message);
+
+let divine = '24';
+console.log(typeof divine)
 
 
 let henry = '24' + 2;
-
 console.log(typeof henry);
 
 
-// Null (Undefined)
+//4. undefined
 let year;
-console.log(typeof year);
+console.log(year);
+console.log(typeof year)
 
-//An empty value has nothng to do with undified rather, its a string
+
+// An empty value has nothing to do with undefined.
 let david = '';
 console.log(typeof david);
 
 
+// Value is undefined, type is undefined
 let car = undefined;
 console.log(typeof car)
 
 
-// let vehicle = 16 + 4 + "volvo";
-// console.log(typeof vehicle);
-
-//when adding a number and string
-let vehicle = 16 + 4 + "volvo";
+// When adding a number and a string, JavaScript will treat the number as a string.
+let vehicle = 16 + 4 + "Volvo"
 console.log(vehicle);
 
+/* 5. Null
 
-/*
-In javascript null is nothing. it is supposed to be somethiing that doesn't exist. The datatype of null is an object
+    In JavaScript null is nothing. It is supposed to be something that doesn't exist
+    The data type of null is an object
+
 */
-
 let prisca = null;
 console.log(typeof prisca);
 
+/**
+ * Difference between undefined and null
+ * Typeof undefined is undefined
+ * Typeof null is object 
+ */
 
-
-//undefine and null ae equal in value
+// undefined and null are equal in value
 console.log(null == undefined);
 
 
+// ******************************** let, const and var *********************************
 
-//let can not be Redecleared
-let ugo = "UGOCHUKWU";
+/* The let keyword
 
-//let ugo = "Kodex studen"; -> cannot be redeclared
+The let keyword was introduced in ES6 (2015)
+
+    **Rules**
+    1. let cannot be Redeclared
+    2. let must be Declared before use
+    3. let has Block Scope
+*/
 
 
-//var can be redeclared
-var kelz = "CEO DRIFLY TECH LIMITED";
-var kelz = "Laravel Developer";
-console.log(kelz);
+// 1. let cannot be Redeclared
+let ugo = "Ugochukwu";
+// let ugo = "Kodex Student"; -> Cannot be redeclared
 
 
-// Block scope
-//let has block scope
+// var can be redeclared
+var kels = "Kodex Student";
+var kels = "Laravel Developer";
+
+console.log(kels);
+
+
+// Block Scope
+// ----------------let has block scope----------------------
+
 {
     let job = 5;
-    console.log(job);
 }
 
+// console.log(job);
 
-//var does not have a block scope
+// --------------- var does not have block scope------------------
 {
-    var animal = "Elephant";
+    var animal = "Lion"
 }
 
 console.log(animal);
 
 
-//
+// ------------------Redeclaring a variable inside a block will also redeclare the variable outside the block-----------------------------------------
 var macBook = 10;
 
 {
     var macBook = 200;
 }
+
 console.log(macBook);
 
 
-
-// REDECLARING A VARIABLE INSDIE A BLOCK WILL NOT REDECLARE THE VARIAVLE OUTSIDE THE BLOCK
+//--------------------------Redeclaring a variable inside a block will not redeclare the variable outside the block--------------------
 
 let windows = 5;
 
 {
     let windows = 9000;
 }
+
 console.log(windows);
 
-
-/*Hoisting -> You can use the variabele before it is declared
-        -----------Let and const are not Hoisted---------
+/* Hoisting -> You can use the variable before it is declared 
+-------let and const are not hoisted-----------
 */
 linux = "Ubuntu";
 var linux;
 
 
-//The const keyword
-/* **Rules**
-    1. Const cant be redeclared
-    2. const can not be reassigned 
-    3. const has block scope
+/* The const keyword
+
+The const keyword was introduced in ES6 (2015)
+
+    **Rules**
+    1. const cannot be Reassigned
+    2. const cannot be Redeclared
+    3. const has Block Scope
 */
 
 
-//Const can not be redeclared
+// const cannot be Reassigned
+const costFromTempSiteToKodex = 150;
+// costFromTempSiteToKodex = 100;
+console.log(costFromTempSiteToKodex);
 
-// const costFromTempSite = 150;
-// costFromTempSite = 150;
-// console.log(costFromTempSite);
+/**
+ * Always declare a variable with const when you know that the value should not be 
+ * changed.
+ */
 
 
-/** Always declare a varible with const when you  know that the value should not be changed
- * **/
+// ********************************* Basic Operators *************************************
 
 
-
-// ***************************NEXT CLAS****************************************
-// Basic Operators
-
-// Math operatiors
-
-const now  = 2023;
+// Math Operators
+const now = 2023;
 const divineAge = now - 1990;
-const davidAge = now - 1990
+const davidAge = now - 1981;
 
 console.log(divineAge, davidAge);
 
-//Multiplication, Division and Raise to Power of number
-console.log(divineAge * 2, davidAge / 10, 2 ** 3);
 
-/*
-* Create two variable 
-* The datatype Must be string
+// Multiplication, Division and Raise to power
+console.log(divineAge * 2, divineAge / 10, 2 ** 3);
 
-*/
 
-const amaraVilage = "Enugu";
-const ogeSchool = "Unizik";
-const addUp = amaraVilage + ' ' + ogeSchool;
-console.log(addUp);
+/**
+ * Create 2 variables
+ * The datatype must be strings
+ * Concatenate (Add) the two varaibles
+ * And display the result in the console
+ */
 
-//Or using let instead of const
+let bestSeries, bestMovie;
 
-let amaraVilages, ogeSchools;
+bestSeries = "From";
+bestMovie = "Extraction"
 
-amaraVilages = "Enugu";
-ogeSchools   = "Unizik";
 
-console.log(amaraVilages + ' ' + ogeSchools);
+console.log(bestSeries + ' ' + bestMovie);
 
-//------------------ USING ASSIGNMENT OPERATORS (=) --------------------------
+
+
+// ----------------------------------Assignment Operator (=) ----------------------------
 let numberOne = 10 + 15;
-numberOne = numberOne + 5;
+numberOne += 5;
+// numberOne = numberOne + 5;
+console.log(numberOne);
 
 
-
-
-let numberTwo = 2 +5;
+let numberTwo = 2 + 5;
 numberTwo *= 7;
- //it can also be used as
-//  numberTwo = numberTwo * 7;
+// Can be rewritten as:
+numberTwo = numberTwo * 7;
+
+let nummberThree = 1;
+nummberThree++;
+// Can be rewritten as:
+nummberThree = nummberThree + 1;
+
+let numberFour  = 4;
+numberFour--;
+// Can be rewritten as:
+numberFour = numberFour - 1;
 
 
 
+// ---------------------------- Comparison Operators ( >, <, >=, <=, ==, ===) --------------------------------
+let ugoAge, olisaAge;
+ugoAge = '35';
+olisaAge = 35;
 
- let numberThree = 1;
- numberThree ++;
-
- //it can be written in the following formate
- //numberThree = numberThree + 1;
-
-
-
- let numberFour = 4;
- numberFour --;
-
- //It can be written as following format too
-
- //numberFour = numberFour - 1;
-
- console.log(numberOne, numberTwo, numberThree, numberFour);
+console.log(ugoAge === olisaAge);
 
 
- // ----------------------- Comparison Operators (> greater than, < less than, >= greater than equal to, <= less than equal to)------------
+// ----------------------------- Operator Precedence ---------------------------------
+const yearNow = 2023;
+const josephAge = yearNow - 1999;
+const henryAge = yearNow - 1990;
 
- let ugoAge, olisaAge;
- ugoAge = 25;
- olisaAge = 23;
- console.log(ugoAge > olisaAge);
-
-
- //----------------------- Operator precedence ----------
-
- const yearNow = 2023;
- const joshAge = yearNow - 1999;
- const kelzAge = yearNow - 1987;
- console.log(kelzAge + joshAge * 10);
-    //or this method console.log((kelzAge + joshAge) * 10);
-
- // Josh age = 24 kelz age 36 so the precedence is 24 + 36 multiply by 10
+console.log((josephAge + henryAge) * 10);
+// 22 + 33 * 10
 
 
 
- // ------ CHALLENGE ABOUT OPERATORS -------
-const johnWeight = 78;
-// const johnHeight = 1.69;
-// const markWeight = 95;
-// const markHeight = 1.88;
-
-// const bmiWeight = johnWeight / markWeight ** 2;
-
-// const bmiHeight =  johnHeight / markHeight ** 2;
-
-// console.log(bmiWeight);
-
-// console.log(bmiHeight);
-
-
-
-// console.log(bmiWeight > bmiHeight);
-
-
-
-
-
-/* -------------------- CODING CHALLANGE -> JavaScript Operators -------------------------
-
-Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 (mass in kg and height in meter).
-
-1. Store Mark's and John's mass and height in variables
-2. Calculate both their BMIs using the formula (you can even implement both versions)
-3. Create a boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
-
-TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
-
-*/
-
-// Corrrection to the previous assignment
 
 /* -------------------- CODING CHALLANGE -> JavaScript Operators -------------------------
 
@@ -317,48 +291,84 @@ console.log(markBMI, johnBMI);
 
 // Step 3 - Create a boolean variable 'markHigherBMI'
 markHigherBMI = markBMI > johnBMI;
-console.log(markHigherBMI); 
+console.log(markHigherBMI);
 
 
+// *********************************** Strings and Template Literals ********************
+const myName = 'Donald';
+const myJob = 'Developer';
+const yearOfBirth = 1717;
+const currentYear = 2077;
+
+const donald = "I'm " + myName + ', a ' + (currentYear - yearOfBirth) + ' year old ' + myJob + '!';
+console.log(donald);
 
 
+const newDonald = `I'm ${myName}, a ${currentYear - yearOfBirth} year old ${myJob}!`;
+console.log(newDonald);
 
-// ********************* String and template literial *******************************
-const myName = 'Kelz';
-const myJob = 'Laravel Developer';
-const myYearOfBirth = '1987';
-const currentYear = '2023';
+console.log(`Hello how are you doing`);
 
-const Kelz = "I'm " + myName + ', a ' + (currentYear - myYearOfBirth) + ' year old ' + myJob + '!';
+console.log('This is \n\
+for multiple \n\
+lines');
 
-console.log(Kelz);
-
-
-const  newKelz = `I'm ${myName}, a ${currentYear - myYearOfBirth} year old ${myJob}!`;
-console.log(newKelz);
-
-
-// Taking a decision: if/else statement
+console.log(`This
+is
+for multiple
+lines`);
 
 
-// const kelsAge = 36;
-const kelsAge = 5;
-// if (kelsAge >= 36)
+// ******************************** Taking Decision: if / else statements *************************************
+const kelsAge = 35;
 
-if (kelsAge >= 18){
-    console.log(`kelz is eligiable to drink alchohol cos his age is ${kelsAge}`);
-    
-}else{
+// If statement only executes when the expression evaluated to true
+if(kelsAge >= 18){
+    console.log(`Kels is eligible to drink Alchohol 🍷 cos his age is ${kelsAge}`);
+}
+// Else statement executes when the if statement returns false
+else{
     const yearsLeft = 18 - kelsAge;
-    console.log(`Kels is not eligible to drink alchohol. Wait for another ${yearsLeft} years`);
+    console.log(`Kels is not eligible to drink alchohol 🥲. Wait another ${yearsLeft} years`);
+}
+
+let dayOfTheWeek = 'Monday';
+
+if(dayOfTheWeek == 'Monday'){
+    console.log('SIT AT HOME 🏠')
+}
+else{
+    console.log('Write some code!');
 }
 
 
-let dayOfTheWeek = 'Monday';
-if (dayOfTheWeek == 'Monday >= Tuesday') {
-    console.log('SIT AT HOME');
-    
-}else{
-    const notMonday ='Tuesday';
-    console.log(`Sorry Today is ${notMonday}, not ${dayOfTheWeek}, go to work`);
+////////////////////////////////////
+// Coding Challenge #2
+
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+
+HINT: Use an if/else statement 😉
+
+GOOD LUCK 😀
+*/
+
+// Step 1 - Store Mark and John's mass and height in variables
+
+// Step 2 - Mark and John's BMI using the formular: BMI = mass / height ** 2 
+markBMI = markMass / markHeight ** 2; // markMass / markHeight * markHeight
+johnBMI = johnMass / johnHeight ** 2;
+
+console.log(markBMI, johnBMI);
+
+
+// Step 3 - Create a boolean variable 'markHigherBMI'
+if(markBMI > johnBMI){
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`)
+}
+else{
+    console.log(`John's BMI ${johnBMI} is higher than Marks's ${markBMI}!`)
 }
