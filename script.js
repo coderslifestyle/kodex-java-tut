@@ -509,3 +509,14 @@ else{
     console.log("No one wins 😭");
 }
 
+
+
+
+/* The switch statment */
+
+const day ="Tuesday";
+switch(day){
+    case 'monday';
+    console.log('Sit at Home';)
+}
+
