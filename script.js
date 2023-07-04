@@ -431,3 +431,81 @@ if(product){
     console.log('Buy Bread Again')
 }
 
+
+
+// *************************************************** Logical Operators ********************************************
+/* Logical Operatoes are used to determine the logic between vairables or values
+    && is the AND Operator
+    || is the OR Operator
+    ! is the NOT Operator   
+*/
+const hasDriversLicense = true;
+const hasGoodVision = false;
+const isTired = false;
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+
+if(hasDriversLicense && hasGoodVision || isTired){
+    console.log('Nonse is eligible to drive');
+}
+else{
+    console.log('Someone else should drive');
+}
+
+/* Coding Challange 3 - If Statements and Opeartors
+There are two football teams, Manchester and Barcelona. They compete against each other 3 times. The team with the highest average score will win the trophy!
+
+1. Calculate the average score for each team using the test data below.
+
+2. Compare the average scores of the teams to determine the winner of the competition and display it on the console. Remember to account for a possible draw, where both teams have the same average score.
+
+3. BONUS 1: Introduce a minimum score requirement of 100. According to this rule, a team can only win if it has a higher score than the other team and a score of at least 100 points. Hint: Use a logical operator to test for the minimum score, along with multiple else-if blocks. 😉
+
+4. BONUS 2: The minimum score requirement also applies to a draw. A draw will only occur if both teams have the same score and both teams have a score greater than or equal to 100 points. Otherwise, neither team wins the trophy.
+
+TEST DATA: Manchester scores 96, 108, and 89. Barcelona scores 88, 91, and 110.
+TEST DATA BONUS 1: Manchester scores 97, 112, and 101. Barcelona scores 109, 95, and 123.
+TEST DATA BONUS 2: Manchester scores 97, 112, and 101. Barcelona scores 109, 95, and 106.
+
+GOOD LUCK! 😀
+
+*/
+// Step 1
+const manchesterScore = (96 + 108 + 89) / 3;
+const barcelonaScore = (88 + 91 + 110) / 3;
+
+console.log(manchesterScore, barcelonaScore);
+
+// Step 2
+if(manchesterScore > barcelonaScore){
+    console.log('Manchester wins the trophy 🏆');
+}
+else if(manchesterScore < barcelonaScore){
+    console.log("Barcelona wins the trophy 🏆");
+}
+else if(manchesterScore === barcelonaScore){
+    console.log('Its a Draw!, Both Teams win 😉');
+}
+
+
+// Step 3
+const manchesterScore2 = (97 + 112 + 101) / 3;
+const barcelonaScore2 = (109 + 95 + 123) / 3;
+console.log(manchesterScore2, barcelonaScore2);
+
+if(manchesterScore2 > barcelonaScore2 && manchesterScore2 >= 100){
+    console.log("Manchester wins the trophy 🏆");
+}
+else if(barcelonaScore2 > manchesterScore2 && barcelonaScore2 >= 100){
+    console.log("Barcelona wins the trophy 🏆");
+}
+else if(manchesterScore2 === barcelonaScore2 && manchesterScore2 >= 100 && barcelonaScore2 >= 100){
+    console.log("Both wins the trophy 🏆");
+}
+else{
+    console.log("No one wins 😭");
+}
+
